@@ -1,10 +1,8 @@
 name: Lock Dev branch
-
 on:
-  shedule: # Run every Monday at 12pm UTC
-    - cron: '0 12 * * 1'
   workflow_dispatch: # Run manually   
-
+  shedule: # Run every Monday at 12pm UTC
+    - cron: "0 12 * * 1"
 jobs:
   lock-brach:
     runs-on: ubuntu-latest
@@ -13,11 +11,6 @@ jobs:
         with:
           branch: dev
           comment:
-            This branch is locked for development.
+            This branch is locked for development
           reason:
-            Lock for QA reason.
-
-
-
-      
-
+            Lock for QA reason
