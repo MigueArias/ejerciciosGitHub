@@ -1,0 +1,22 @@
+name: Lock Dev branch
+
+on:
+  shedule:
+    - cron: '0 12 * * 1'
+
+jobs:
+  lock-brach:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: juliangruber/branch-lock@v1
+        with:
+          branch: dev
+          comment:
+            This branch is locked for development.
+          reason:
+            Lock for QA reason.
+
+
+
+      
+
