@@ -1,6 +1,7 @@
 name: Lock Dev branch
 
 on:
+  workflow_dispatch:
   shedule:
     - cron: '0 12 * * 1'
 
